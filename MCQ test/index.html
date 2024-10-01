@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Systems MCQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-white@4/dark.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Operating Systems MCQ Test</h1>
+        <form name="quizForm" id="quizForm">
+            <div class="question">
+                <p>1. Which of the following is the primary purpose of an operating system?</p>
+                <input type="radio" name="q1" value="a"> a) To manage hardware resources<br>
+                <input type="radio" name="q1" value="b"> b) To provide a user interface<br>
+                <input type="radio" name="q1" value="c"> c) To execute and provide services for applications software<br>
+                <input type="radio" name="q1" value="d"> d) All of the above<br>
+                <p class="feedback" id="feedback-q1"></p>
+            </div>
+            <div class="question">
+                <p>2. Which of the following is NOT an operating system?</p>
+                <input type="radio" name="q2" value="a"> a) Windows<br>
+                <input type="radio" name="q2" value="b"> b) Linux<br>
+                <input type="radio" name="q2" value="c"> c) Oracle<br>
+                <input type="radio" name="q2" value="d"> d) MacOS<br>
+                <p class="feedback" id="feedback-q2"></p>
+            </div>
+            <div class="question">
+                <p>3. What is the kernel of an operating system responsible for?</p>
+                <input type="radio" name="q3" value="a"> a) User interface management<br>
+                <input type="radio" name="q3" value="b"> b) Managing system resources and communication between hardware and software<br>
+                <input type="radio" name="q3" value="c"> c) Application software execution<br>
+                <input type="radio" name="q3" value="d"> d) File system management<br>
+                <p class="feedback" id="feedback-q3"></p>
+            </div>
+            <div class="question">
+                <p>4. In which type of operating system is a single task performed by the CPU at a time?</p>
+                <input type="radio" name="q4" value="a"> a) Multi-tasking<br>
+                <input type="radio" name="q4" value="b"> b) Real-time<br>
+                <input type="radio" name="q4" value="c"> c) Single-tasking<br>
+                <input type="radio" name="q4" value="d"> d) Distributed<br>
+                <p class="feedback" id="feedback-q4"></p>
+            </div>
+            <div class="question">
+                <p>5. Which scheduling algorithm assigns the CPU to the process that has been waiting the longest?</p>
+                <input type="radio" name="q5" value="a"> a) Shortest Job Next (SJN)<br>
+                <input type="radio" name="q5" value="b"> b) First-Come, First-Served (FCFS)<br>
+                <input type="radio" name="q5" value="c"> c) Round Robin<br>
+                <input type="radio" name="q5" value="d"> d) Priority Scheduling<br>
+                <p class="feedback" id="feedback-q5"></p>
+            </div>
+            <div class="question">
+                <p>6. Which of the following is an example of a real-time operating system?</p>
+                <input type="radio" name="q6" value="a"> a) Windows 10<br>
+                <input type="radio" name="q6" value="b"> b) Linux<br>
+                <input type="radio" name="q6" value="c"> c) RTOS<br>
+                <input type="radio" name="q6" value="d"> d) MacOS<br>
+                <p class="feedback" id="feedback-q6"></p>
+            </div>
+            <div class="question">
+                <p>7. What does the term "context switching" refer to in an operating system?</p>
+                <input type="radio" name="q7" value="a"> a) The switching of applications by the user<br>
+                <input type="radio" name="q7" value="b"> b) The process of storing and restoring the state (context) of a CPU such that multiple processes can share a single CPU resource<br>
+                <input type="radio" name="q7" value="c"> c) Switching from one operating system to another<br>
+                <input type="radio" name="q7" value="d"> d) The transition between user mode and kernel mode<br>
+                <p class="feedback" id="feedback-q7"></p>
+            </div>
+            <div class="question">
+                <p>8. Which of the following memory management techniques involves swapping processes between main memory and a storage device?</p>
+                <input type="radio" name="q8" value="a"> a) Paging<br>
+                <input type="radio" name="q8" value="b"> b) Segmentation<br>
+                <input type="radio" name="q8" value="c"> c) Virtual memory<br>
+                <input type="radio" name="q8" value="d"> d) Contiguous memory allocation<br>
+                <p class="feedback" id="feedback-q8"></p>
+            </div>
+            <div class="question">
+                <p>9. In Unix-based operating systems, what does the command chmod do?</p>
+                <input type="radio" name="q9" value="a"> a) Changes the file name<br>
+                <input type="radio" name="q9" value="b"> b) Changes the ownership of the file<br>
+                <input type="radio" name="q9" value="c"> c) Changes the file permissions<br>
+                <input type="radio" name="q9" value="d"> d) Changes the file location<br>
+                <p class="feedback" id="feedback-q9"></p>
+            </div>
+            <div class="question">
+                <p>10. Which of the following is a method of inter-process communication in operating systems?</p>
+                <input type="radio" name="q10" value="a"> a) Message passing<br>
+                <input type="radio" name="q10" value="b"> b) File sharing<br>
+                <input type="radio" name="q10" value="c"> c) Printing<br>
+                <input type="radio" name="q10" value="d"> d) Emailing<br>
+                <p class="feedback" id="feedback-q10"></p>
+            </div>
+            <button type="button" onclick="checkAnswers()">Submit</button>
+            <button type="button" onclick="resetQuiz()">Reset</button>
+            <div class="question">
+                <label for="score"></label><br>
+                <input type="text" id="score" name="score" value="Score out of 10" readonly><br>
+            </div>
+            <div class="question">
+                <label for="Percentage"></label><br>
+                <input type="text" id="Percentage" name="Percentage" value="Percentage score" readonly><br>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

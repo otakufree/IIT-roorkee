@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Drawing Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="canvas-container">
+    <div class="inner-container">
+      <div class="toolbar">
+        <button onclick="setTool('pencil')" class="tool-btn"><img src="pencil.png"></button>
+        <button onclick="setTool('eraser')" class="tool-btn"><img src="eraser.png"></button>
+        <button onclick="setTool('fillColor')" class="tool-btn"><img src="fillColor.png"></button>
+        <div id="color-container">
+          <div style="background-color: red;" onclick="changeColor('red')"></div>
+          <div style="background-color: green;" onclick="changeColor('green')"></div>
+          <div style="background-color: blue;" onclick="changeColor('blue')"></div>
+          <div style="background-color: yellow;" onclick="changeColor('yellow')"></div>
+          <div style="background-color: black;" onclick="changeColor('black')"></div>
+        </div>
+        <button id="clear-btn" onclick="clearCanvas()">Clear Canvas</button>
+        <button id="save-btn" onclick="saveAsImage()">Save as Image</button>
+      </div>
+    </div>
+    <canvas id="canvas" width="700" height="500"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
